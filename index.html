@@ -9,7 +9,7 @@
 <div id="left">
   <div id="topleft">
 
-
+<p onclick="myFunction()">Your Name:</p><p id="demo"></p>
     <h1>StreetManClicker</h1>
     <p id="CookieAmount">Current Streetmans: 0</p>
 
@@ -130,7 +130,17 @@
     }
   }
 
-alert("Note: there are some bugs, if you want to help us click on the button on the top of this page");
+alert("Note: there are some bugs lol");
+ 
+  
+function myFunction() {
+  var person = prompt("Please enter your name", "Harry Potter");
+  if (person != null) {
+    document.getElementById("demo").innerHTML =
+    "" + person + "´s Drug store";
+  }
+}
+
 
 </script>
 <style media="screen">
