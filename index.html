@@ -1,242 +1,296 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>StreetManClicker</title>
-  <link rel="icon" type="image/x-icon" href="https://yt3.ggpht.com/ytc/AKedOLQ0c8un0RLXgTH28HoHrfnlafNboY4773Rfxti4NQ=s900-c-k-c0x00ffffff-no-rj">
-</head>
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <title>StreetManClicker</title>
+    <link rel="icon" type="image/x-icon" href="https://yt3.ggpht.com/ytc/AKedOLQ0c8un0RLXgTH28HoHrfnlafNboY4773Rfxti4NQ=s900-c-k-c0x00ffffff-no-rj">
+  </head>
 
-<body>
-<div id="main">
-<div id="left">
-  <div id="topleft">
+  <body>
+  <div id="main">
+  <div id="left">
+    <div id="topleft">
 
-<p onclick="myFunction()">Your Name:</p><p id="demo"></p>
-    <h1>StreetManClicker</h1>
-    <p id="CookieAmount">Current Streetmans: 0</p>
-
-
-
-<div id="button">
-
-
-    <button onclick="Click()" id="Button" style="background: none; border: none; padding: 0;"><img src="https://pbs.twimg.com/profile_images/1251899756529487872/0PBO0NLP_400x400.jpg" alt="Cookie" width="250" id="CookieButton"></button>
-</div>
-</div>
-</div>
-
-<div id="middle">
-
-</div>
-
-<div id="right">
-<div id="top">
-  <h2>Upgrades:</h2>
-</div>
-
-  <div id="scroll">
-<div class="margin">
-
-
-<div class="boks">
-
-
-  <img src="https://www.heineken.com/media-us/01pfxdqq/heineken-original-bottle.png?quality=85" width="50">
-      <button onclick="Upgrade1Click()" id="Upgrade1">Beer</button>
-        <p id="Upgrade1Text">
-          0 Beers!	Price: 10</p>
-</div>
-
-
-<div class="boks3">
-  <img src="https://key0.cc/images/small/37490_5dc3e96412f83e32500e8622357d1372.png" width="20" right="30px">
-    <button onclick="Upgrade2Click()" id="Upgrade2">Jack Daniels</button>
-        <p id="Upgrade2Text"> 0 Jack Daniles! Price: 1500 </p></div>
-
-  <div class="boks2">
-  <img src="https://www.vinello.eu/media/image/84/eb/d6/vikingfjord-vodka-1_600x600.png" width="25" style="right:10px;">
-    <button onclick="Upgrade3Click()" id="Upgrade3">Vodka</button>
-        <p id="Upgrade3Text"> 0 Vodkas! Price: 1000000 </p>
-        </div>
-
-
-        </div>
-</div>
-</div>
+  <p onclick="myFunction()">Your Name:</p><p id="demo"></p>
+      <h1>StreetManClicker</h1>
+      <p id="CookieAmount">Current Streetmans: 0</p>
 
 
 
-</div>
-<script>
-  <!-- Setting variables -->
-  var Points = 0	<!-- The points the player has -->
-  var Multiplier = 1	<!-- How much the adding points get multiplied, increases with each upgraded -->
-  var Upgrade1Times = 0	<!-- How many times upgraded -->
-  var Upgrade1Price = 10
-        var Upgrade2Times = 0
-        var Upgrade2Price = 1500 <!-- The price of the upgrade -->
-  var Upgrade3Times = 0
-        var Upgrade3Price = 1000000
-  var Button = document.getElementById("Button");	<!-- Defines the main button pressed to gain points -->
-  var Upgrade1Button = document.getElementById("Upgrade1");
-        var Upgrade2Button = document.getElementById("Upgrade2");
-         var Upgrade3Button = document.getElementById("Upgrade3");
-       <!-- Defines the upgrade button -->
-  var Upgrade1Text = document.getElementById("Upgrade1Text");
-        var Upgrade2Text = document.getElementById("Upgrade2Text");
-        var Upgrade3Text = document.getElementById("Upgrade3Text");
-        <!-- Defines the text stuff for the upgrade -->
-
-  var CookieButton = document.getElementById("CookieButton");	<!-- Defines the cookie image in the main button -->
-
-  var CookieAmount = document.getElementById("CookieAmount"); <!-- Get the text where it displays your cookies -->
+  <div id="button">
 
 
-  <!-- Function executed when the main button to gain points is pressed -->
-  function Click() {
-    var AddPoints = 1 * Multiplier
-    Points = Points + AddPoints
-    CookieAmount.innerHTML = "Current Streetmans: " + Points
-    CookieButton.width = "255"
-    setTimeout(() => {CookieButton.width = "250";}, 100);
-  }
+      <button onclick="Click()" id="Button" style="background: none; border: none; padding: 0;"><img src="https://pbs.twimg.com/profile_images/1251899756529487872/0PBO0NLP_400x400.jpg" alt="Cookie" width="250" id="CookieButton"></button>
+  </div>
+  </div>
+  </div>
 
-  <!-- Function executed when player press the upgrade button -->
-  function Upgrade1Click() {
-    if (Points >= Upgrade1Price) {
-      Multiplier = Multiplier + 1
-      Upgrade1Times = Upgrade1Times + 1
-      Points = Points - Upgrade1Price
-      Upgrade1Price = Upgrade1Price + 10
-      Upgrade1Text.innerHTML = " " + Upgrade1Times + " Beers!	Price: " + Upgrade1Price
-            }}
-                function Upgrade2Click() {
-    if (Points >= Upgrade2Price) {
-      Multiplier = Multiplier + 30
-      Upgrade2Times = Upgrade2Times + 1
-      Points = Points - Upgrade2Price
-      Upgrade2Price = Upgrade2Price + 1500
-      Upgrade2Text.innerHTML = " " + Upgrade2Times + " Jack Daniels!	Price: " + Upgrade2Price }}
+  <div id="middle">
 
-                function Upgrade3Click() {
-    if (Points >= Upgrade3Price) {
-      Multiplier = Multiplier + 1
-      Upgrade3Times = Upgrade3Times + 1
-      Points = Points - Upgrade3Price
-      Upgrade3Price = Upgrade3Price + 1000000
-      Upgrade3Text.innerHTML = " " + Upgrade3Times + " Vodka!	Price: " + Upgrade3Price
+  </div>
+
+  <div id="right">
+  <div id="top">
+    <h2>Upgrades:</h2>
+  </div>
+
+    <div id="scroll">
+  <div class="margin">
+
+
+  <div class="boks">
+
+
+    <img src="https://www.heineken.com/media-us/01pfxdqq/heineken-original-bottle.png?quality=85" width="50">
+        <button onclick="Upgrade1Click()" id="Upgrade1">Beer</button>
+          <p id="Upgrade1Text">
+            0 Beers!	Price: 10</p>
+  </div>
+
+
+  <div class="boks3">
+    <img src="https://key0.cc/images/small/37490_5dc3e96412f83e32500e8622357d1372.png" width="20" right="30px">
+      <button onclick="Upgrade2Click()" id="Upgrade2">Jack Daniels</button>
+          <p id="Upgrade2Text"> 0 Jack Daniles! Price: 1500 </p></div>
+
+    <div class="boks2">
+    <img src="https://www.vinello.eu/media/image/84/eb/d6/vikingfjord-vodka-1_600x600.png" width="25" style="right:10px;">
+      <button onclick="Upgrade3Click()" id="Upgrade3">Vodka</button>
+          <p id="Upgrade3Text"> 0 Vodkas! Price: 1000000 </p>
+          </div>
+
+
+          </div>
+  </div>
+  </div>
 
 
 
+  </div>
+  <script>
+    <!-- Setting variables -->
+    var Points = 0	<!-- The points the player has -->
+    var Multiplier = 1	<!-- How much the adding points get multiplied, increases with each upgraded -->
+    var Upgrade1Times = 0	<!-- How many times upgraded -->
+    var Upgrade1Price = 10
+          var Upgrade2Times = 0
+          var Upgrade2Price = 1500 <!-- The price of the upgrade -->
+    var Upgrade3Times = 0
+          var Upgrade3Price = 1000000
+    var Button = document.getElementById("Button");	<!-- Defines the main button pressed to gain points -->
+    var Upgrade1Button = document.getElementById("Upgrade1");
+          var Upgrade2Button = document.getElementById("Upgrade2");
+           var Upgrade3Button = document.getElementById("Upgrade3");
+         <!-- Defines the upgrade button -->
+    var Upgrade1Text = document.getElementById("Upgrade1Text");
+          var Upgrade2Text = document.getElementById("Upgrade2Text");
+          var Upgrade3Text = document.getElementById("Upgrade3Text");
+          <!-- Defines the text stuff for the upgrade -->
+
+    var CookieButton = document.getElementById("CookieButton");	<!-- Defines the cookie image in the main button -->
+
+    var CookieAmount = document.getElementById("CookieAmount"); <!-- Get the text where it displays your cookies -->
+
+
+    <!-- Function executed when the main button to gain points is pressed -->
+    function Click() {
+      var AddPoints = 1 * Multiplier
+      Points = Points + AddPoints
       CookieAmount.innerHTML = "Current Streetmans: " + Points
+      CookieButton.width = "255"
+      setTimeout(() => {CookieButton.width = "250";}, 100);
+    }
+
+    <!-- Function executed when player press the upgrade button -->
+    function Upgrade1Click() {
+      if (Points >= Upgrade1Price) {
+        Multiplier = Multiplier + 1
+        Upgrade1Times = Upgrade1Times + 1
+        Points = Points - Upgrade1Price
+        Upgrade1Price = Upgrade1Price + 10
+        Upgrade1Text.innerHTML = " " + Upgrade1Times + " Beers!	Price: " + Upgrade1Price
+              }}
+                  function Upgrade2Click() {
+      if (Points >= Upgrade2Price) {
+        Multiplier = Multiplier + 30
+        Upgrade2Times = Upgrade2Times + 1
+        Points = Points - Upgrade2Price
+        Upgrade2Price = Upgrade2Price + 1500
+        Upgrade2Text.innerHTML = " " + Upgrade2Times + " Jack Daniels!	Price: " + Upgrade2Price }}
+
+                  function Upgrade3Click() {
+      if (Points >= Upgrade3Price) {
+        Multiplier = Multiplier + 1
+        Upgrade3Times = Upgrade3Times + 1
+        Points = Points - Upgrade3Price
+        Upgrade3Price = Upgrade3Price + 1000000
+        Upgrade3Text.innerHTML = " " + Upgrade3Times + " Vodka!	Price: " + Upgrade3Price
+
+
+
+        CookieAmount.innerHTML = "Current Streetmans: " + Points
+      }
+    }
+
+  alert("Note: there are some bugs lol");
+
+
+  function myFunction() {
+    var person = prompt("Please enter your name", "Harry Potter");
+    if (person != null) {
+      document.getElementById("demo").innerHTML =
+      "" + person + "";
     }
   }
 
-alert("Note: there are some bugs lol");
- 
-  
-function myFunction() {
-  var person = prompt("Please enter your name", "Harry Potter");
-  if (person != null) {
-    document.getElementById("demo").innerHTML =
-    "" + person + "";
-  }
-}
 
-
-</script>
-<style media="screen">
+  </script>
+  <style media="screen">
 
 
 
-  #main{
+    #main{
+      display: flex;
+
+      height: 800px;
+    }
+
+    #left{
+      display: flex;
+      height: 100%;
+      width: 20%;
+    }
+    #right{
+      display: flex;
+      height: 100%;
+      width: 20%;
+    }
+    #scroll{
+      display: flex;
+      margin-top: 100px;
+      border: solid black 0,5px;
+      height:430px;
+      width:280px;
+      overflow:scroll;border:2px
+      solid black;
+      padding:2%;
+    }
+
+    .boks{
     display: flex;
-
-    height: 800px;
-  }
-
-  #left{
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+    }
+    .boks2{
     display: flex;
-    height: 100%;
-    width: 20%;
-  }
-  #right{
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+    height: 100px;
+    margin-left: -235px;
+    margin-top: 350px
+    }
+    .boks3{
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+    height: 100px;
+    margin-left: -226px;
+    margin-top: 200px
+    }
+
+
+
+    #middle{
+      display: flex;
+      height: 100%;
+      width: 60%;
+    }
+
+    .margin{
+      display: flex;
+      width: 1100px;
+      height: 100%;
+
+    }
+
+    #top{
+      display:flex;
+      width: 0%;
+      height: 20px;
+    }
+
+    }
+    #button{
     display: flex;
-    height: 100%;
-    width: 20%;
-  }
-  #scroll{
-    display: flex;
-    margin-top: 100px;
-    border: solid black 0,5px;
-    height:430px;
-    width:280px;
-    overflow:scroll;border:2px
-    solid black;
-    padding:2%;
-  }
+    height: 250px;
+    width: 250px;
+    }
 
-  .boks{
-  display: flex;
-  align-items: center;
-  justify-content:center;
-  width: 100%;
-  height: 100px;
-  margin-top: 50px;
-  }
-  .boks2{
-  display: flex;
-  align-items: center;
-  justify-content:center;
-  width: 100%;
-  height: 100px;
-  margin-left: -235px;
-  margin-top: 350px
-  }
-  .boks3{
-  align-items: center;
-  justify-content:center;
-  width: 100%;
-  height: 100px;
-  margin-left: -226px;
-  margin-top: 200px
-  }
+  </style>
 
 
-
-  #middle{
-    display: flex;
-    height: 100%;
-    width: 60%;
+  <style>
+  .dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
   }
 
-  .margin{
-    display: flex;
-    width: 1100px;
-    height: 100%;
-
+  .dropdown {
+    position: relative;
+    display: inline-block;
   }
 
-  #top{
-    display:flex;
-    width: 0%;
-    height: 20px;
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
   }
 
-  }
-  #button{
-  display: flex;
-  height: 250px;
-  width: 250px;
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
   }
 
-</style>
+  .dropdown-content a:hover {background-color: #ddd;}
 
-<audio controls autoplay loop>
-  <source src="https://www.mboxdrive.com/streetmantv_not_criminal_official_music_video_7477813591978196473.mp3" type="audio/mpeg">
+  .dropdown:hover .dropdown-content {display: block;}
+
+  .dropdown:hover .dropbtn {background-image: url(https://images.genius.com/6e3dd8f6f339817ce8d0e90fc2bbf156.640x640x1.jpg);background-repeat: no-repeat;
+width: 10px;
+height: 20px;}
+  </style>
+  </head>
+  <body>
+
+
+  <div class="dropdown">
+    <button class="dropbtn">Music</button>
+    <div class="dropdown-content">
+    Orginal:
+     <audio controls loop>
+    <source src="https://www.mboxdrive.com/streetmantv_not_criminal_official_music_video_7477813591978196473.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
-</audio>
-</body>
+  </audio>
+  Instrumental:
+       <audio controls autoplay loop>
+    <source src="https://www.mboxdrive.com/streetmanending.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>
+    </div>
+  </div>
+  </body>
 
 
 
-</html>
+  </html>
