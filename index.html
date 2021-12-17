@@ -35,26 +35,32 @@
 
 
 <style>
-
+/*Div for all upgrade stuff*/
 #upgrades{
 display:flex;
 border: solid black 1px;
 width: 1000px;
-height: 150px;
+height: 143px;
 flex-direction: row;
-position: absolute;
-top: 650px;
-left: 15%;
+margin-top: px;
+background-color: #2e2e2e;
 }
-
+/*div around upgrade buttons*/
 .boks{
   display: flex;
-
-   height: 100%;
-   width:25em;
+flex-direction: column;
+   height: 150px;
+   width:200px;
    align-items: center;
    justify-content:center;
+float: left;
+
 }
+
+.boks:hover{
+/* For devolopment*/
+}
+/* For the ¨Upgrades¨ heading */
 .boks2{
   display: flex;
 
@@ -65,60 +71,63 @@ left: 15%;
 }
 
 
-
+/*html.. duhh*/
 html{
   display: flex;
-
-
+overflow:hidden;
+user-select:none;
   align-items: center;
   justify-content:center;
 
 }
+/*All the upgrade-buttons*/
 #Knapp1{
   display:flex;
-  border: solid black 1px;
+
   border-radius: 25px;
   background: #73AD21;
   align-items: center;
   justify-content:center;
+  width: 100%;
+  height:60px;
 }
 #Knapp2{
   display:flex;
-  border: solid black 1px;
+
   border-radius: 25px;
   background: #8C6E4B;
   align-items: center;
   justify-content:center;
+  width: 100%;
+  height:60px;
 }
 #Knapp3{
   display:flex;
-  border: solid black 1px;
+
   border-radius: 25px;
   background: #2596be;
   align-items: center;
   justify-content:center;
+  width: 100%;
+  height:60px;
 }
-
+/*body.. duhh*/
 body{
   -webkit-tap-highlight-color: transparent;
    -webkit-user-select: none;
 	-webkit-touch-callout: none;
   background-color:#282828 ;
   color: White;
+cursor:url('https://i.ibb.co/ZJKC9NL/Uten-tittel-5.png'), auto;
 }
 
-
+/*div box around the big button*/
 .Game{
   display: flex;
   align-items: center;
   justify-content:center;
 
-    height:400px;
-}
-h3{
-  display: flex;
-  position: absolute;
-  top: 600px;
+    height:600px;
 }
 
  </style>
@@ -131,14 +140,16 @@ h3{
 
 
 <center>
+  <!--Big button and heading-->
 		<h1>StreetManClicker</h1>
 		<p id="CookieAmount">Current Streetmans: 0</p>
 		<button onclick="Click()" id="Button" style="background: none; border: none; padding: 0;"><img src="https://pbs.twimg.com/profile_images/1251899756529487872/0PBO0NLP_400x400.jpg" alt="Cookie" width="250" id="CookieButton"></button>
 </div>
     <div class="boks2">
       <center>
-    <div class="strek2"></div>
+
     </center>
+    <!-- Upgrades-->
            <h3>Upgrades:</h3>
 
            </div>
@@ -146,9 +157,9 @@ h3{
 
 
         <p1>
-<div class="strek"></div>
-<div class="boks">
 
+<div class="boks">
+<!--Button1 -->
         <div id="Knapp1"<button onclick="Upgrade1Click()" id="Upgrade1"></button>
         <p id="Upgrade1Text">
 			0 Beers!
@@ -160,16 +171,19 @@ h3{
 
         </p1>
         <br>
-  <div class="strek"></div>
-        <div class="boks">
 
+  <div class="boks"></div>
+        <div class="boks">
+<!--Button 2 -->
         		<p2><div id="Knapp2"<button onclick="Upgrade2Click()" id="Upgrade2"></button></p2>
                  <p id="Upgrade2Text"> 0 Jack Daniles! Price: 1500 </p> </div></div>
 
                  <br>
-     <div class="strek"></div>
-                 <div class="boks">
 
+
+      <div class="boks"></div>
+                 <div class="boks">
+<!--Button 3 -->
                  <div id="Knapp3"
                  <button onclick="Upgrade3Click()" id="Upgrade3"></button>
                  <p id="Upgrade3Text"> 0 Vodkas! Price: 1000000 </p></div></div>
@@ -178,7 +192,7 @@ h3{
   <center>
 <div class="strek2"></div>
 </center>
-
+<!--Javascript lol: -->
 
 		<script>
 			<!-- Setting variables -->
@@ -210,8 +224,10 @@ h3{
     				}else{
     					Points = JSON.parse(localStorage.getItem("Points"));
     				}
-    				CookieAmount.innerHTML = "Current Streetmans: " + Points
+			CookieAmount.innerHTML = "Current Streetmans: " + Points
+
       }
+
       if("Upgrade1Times" in localStorage){
         if(JSON.parse(localStorage.getItem("Upgrade1Times")) == 0){
     					Upgrade1Times = 0;
@@ -323,7 +339,31 @@ h3{
         localStorage.setItem("Upgrade3Times", Upgrade3Times)
         localStorage.setItem("Upgrade3Price", Upgrade3Price)
 
-			}
+		}
+
+      var Cherios = "Lmao u big pp man:)";
+      {
+        function Cherios(){
+
+  console.log("Lmao u big pp man:)")
+}}
+
+
+/*Tried hack thing but dindt work*/
+var Hack = "Hack lol";
+{
+
+  function Hack(){
+if(Points>1){
+  set (Points = Lol)
+}
+console.log("Hack lol")
+set (Points=100000)
+
+}}
+
+
+
 		</script>
 
 
@@ -331,7 +371,7 @@ h3{
 
 
 
-
+<!-- If u read this, write this in console: Cherios -->
 
 
 
